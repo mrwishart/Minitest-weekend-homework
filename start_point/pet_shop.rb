@@ -41,3 +41,11 @@ def find_pet_by_name(shop, petname)
   #404: Pet not found!
   return nil
 end
+
+def remove_pet_by_name(shop, petname)
+  for pet in shop[:pets]
+    if pet[:name] == petname
+      shop[:pets].delete(pet)
+    end
+  end
+end
