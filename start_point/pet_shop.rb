@@ -38,4 +38,6 @@ def find_pet_by_name(shop, petname)
       return pet
     end
   end
+  #404: Pet not found!
+  return nil
 end
