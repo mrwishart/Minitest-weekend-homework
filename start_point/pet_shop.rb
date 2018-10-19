@@ -75,21 +75,23 @@ def customer_can_afford_pet(customer, pet)
 end
 
 def sell_pet_to_customer(shop, pet, customer)
-  if customer_can_afford_pet(customer, pet)
-    # Step 1: Take customer money
-    remove_customer_cash(customer, pet[:price])
+  if pet != nil
+    if customer_can_afford_pet(customer, pet)
+      # Step 1: Take customer money
+      remove_customer_cash(customer, pet[:price])
 
-    # Step 2: Add to shop money
-    add_or_remove_cash(shop, pet[:price])
+      # Step 2: Add to shop money
+      add_or_remove_cash(shop, pet[:price])
 
-    # Step 3: Add pet to customer array
-    add_pet_to_customer(customer, pet)
+      # Step 3: Add pet to customer array
+      add_pet_to_customer(customer, pet)
 
-    # Step 4: Remove pet from shop array
-    remove_pet_by_name(shop, pet[:name])
+      # Step 4: Remove pet from shop array
+      remove_pet_by_name(shop, pet[:name])
 
-    # Step 5: Increment pets sold
-    increase_pets_sold(shop, 1)
+      # Step 5: Increment pets sold
+      increase_pets_sold(shop, 1)
+    end
   end
 
 end
