@@ -1,4 +1,8 @@
-# Pet Shop
+# TDD Weekend Homework
+
+1st weekend homework from CodeClan. Using Ruby and MiniTest to develop TDD methods. Original brief:
+
+## Pet Shop
 
 For your weekend homework your task is to write some functions to be used in a pet shop.
 
